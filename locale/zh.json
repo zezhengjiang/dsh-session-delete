@@ -1,0 +1,7 @@
+{
+  "meta": {
+    "title": "删除会话",
+    "description": "在会话菜单中添加红色“删除会话”操作。会话日志与缓存数据移动到 DeepSeek Harness 主目录下的回收站，五秒内可点击“撤销”恢复，超时后删除生效。",
+    "detail": "docs/DETAIL.md"
+  }
+}

@@ -1,0 +1,4 @@
+# Local install artifacts; `files` in package.json re-adds them when packaging.
+node_modules/
+*.tgz
+*.log

@@ -1,0 +1,7 @@
+{
+  "meta": {
+    "title": "Session delete",
+    "description": "Adds a red Delete session action to the Session menu. The session's log and cached state move to the Harness Trash under the DeepSeek Harness home, and a five-second notification offers Undo before the deletion stands.",
+    "detail": "docs/DETAIL.md"
+  }
+}

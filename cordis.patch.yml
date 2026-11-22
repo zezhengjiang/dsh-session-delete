@@ -1,0 +1,9 @@
+# @local/session-delete bundle patch: one Host row. The Client half joins the
+# browser graph automatically because package.json declares dsh.client and
+# exports "./client".
+- insert:
+    - id: session-delete
+      name: '@local/session-delete'
+      config:
+        trashRoot: !!js dshHomePath('trash')
+        undoSeconds: 5

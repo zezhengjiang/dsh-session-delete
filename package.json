@@ -1,0 +1,46 @@
+{
+  "name": "@local/session-delete",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Delete sessions from the Session menu with a five-second undo; deleted sessions move to the Harness Trash.",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./package.json": "./package.json",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "docs",
+    "icon.svg",
+    "node_modules"
+  ],
+  "engines": {
+    "dsh": ">=0.2.2-rc.5 <0.3.0"
+  },
+  "dependencies": {
+    "@deepseek-ai/dsh-typert-protocol": "0.2.2-rc.5",
+    "schemastery": "^3.18.0"
+  },
+  "dsh": {
+    "bundle": { "patch": "./cordis.patch.yml" },
+    "client": {
+      "platform": "web",
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-workspace",
+        "@deepseek-ai/dsh-client-ui-context-menu",
+        "@deepseek-ai/dsh-client-ui-session",
+        "@deepseek-ai/dsh-client-ui-layout",
+        "@deepseek-ai/dsh-client-ui-slots",
+        "@deepseek-ai/dsh-client-locale",
+        "@deepseek-ai/dsh-api-remotes"
+      ],
+      "external": ["@deepseek-ai/dsh-api-gateway/client"]
+    }
+  }
+}
